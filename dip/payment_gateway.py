@@ -8,12 +8,12 @@ class PaymentGateway(ABC):
 
 class Stripe(PaymentGateway):
     def pay(self, amount):
-        print("Paid via Stripe")
+        print("Paid via Stripe: ${:.2f}".format(amount))
 
 
 class Razorpay(PaymentGateway):
     def pay(self, amount):
-        print("Paid via Razorpay")
+        print("Paid via Razorpay: ${:.2f}".format(amount))
 
 
 class Checkout:
